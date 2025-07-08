@@ -19,7 +19,7 @@ export default function Home() {
           className="hero-split"
           style={{
             textAlign: "center",
-            maxWidth: "600px",
+            maxWidth: "800px",
             margin: "0 auto",
           }}
         >
@@ -37,18 +37,57 @@ export default function Home() {
             Welcome to Webflow Cloud
           </h1>
           <Block tag="p" className="margin-bottom-24px">
-            aaThis is a simple test using Basic components with enhanced styling.
-          </Block>
-          <div>
-            <Link
-              button={true}
-              options={{
-                href: "#",
-              }}
-              className="button-primary"
-            >
-              Get Started
-            </Link>
+            This is a simple test using Basic components with enhanced styling.
+          </Block>  
+          
+          {/* 2-Column Layout for Buttons */}
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: "1.5rem",
+              maxWidth: "400px",
+              margin: "0 auto",
+            }}
+          >
+            {/* Primary Button Column */}
+            <div>
+              <Link
+                button={true}
+                options={{
+                  href: "#",
+                }}
+                className="button-primary"
+                style={{
+                  width: "100%",
+                  display: "block",
+                  textAlign: "center",
+                }}
+              >
+                Primary Action
+              </Link>
+            </div>
+            
+            {/* Secondary Button Column */}
+            <div>
+              <Link
+                button={true}
+                options={{
+                  href: "#",
+                }}
+                className="button-secondary"
+                style={{
+                  width: "100%",
+                  display: "block",
+                  textAlign: "center",
+                  backgroundColor: "transparent",
+                  color: "#3245ff",
+                  border: "2px solid #3245ff",
+                }}
+              >
+                Secondary Action
+              </Link>
+            </div>
           </div>
         </Block>
       </Block>
